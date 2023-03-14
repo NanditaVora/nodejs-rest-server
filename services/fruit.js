@@ -5,6 +5,11 @@ async function getFruits() {
   };
 }
 
+async function addFruit(fruit) {
+  FRUITS.push(fruit);
+}
+
 module.exports = {
   getFruits,
+  addFruit,
 };
