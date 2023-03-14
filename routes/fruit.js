@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const nameService = require('../services/names');
+const fruitService = require('../services/fruit');
 
 /* GET Names */
 router.get('/', async function (req, res, next) {
   try {
-    console.log('inside namesRouter');
-    res.json(await nameService.getNames());
+    res.json(await fruitService.getFruits());
   } catch (err) {
-    console.error(`Error while getting names `, err.message);
+    console.error(`Error while getting fruits `, err.message);
     next(err);
   }
 });

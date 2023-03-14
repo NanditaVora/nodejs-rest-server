@@ -1,5 +1,5 @@
 const express = require('express');
-const namesRouter = require('./routes/names');
+const fruitRouter = require('./routes/fruit');
 const app = express();
 const port = 3000;
 app.use(express.json());
@@ -9,7 +9,7 @@ app.use(
   })
 );
 
-app.use('/names', namesRouter);
+app.use('/api/fruits', fruitRouter);
 
 app.get('/', (req, res) => {
   res.json({ message: 'ok' });
