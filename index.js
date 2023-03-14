@@ -8,10 +8,10 @@ app.use(
     extended: true,
   })
 );
-
 app.use('/api/fruits', fruitRouter);
 
 app.get('/', (req, res) => {
+  console.log('request received');
   res.json({ message: 'ok' });
 });
 app.listen(port, () => {
